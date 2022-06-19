@@ -14,7 +14,7 @@
   <link href="{{ asset('homepage/assets/img/favicon.png') }}" rel="icon">
   <link href="{{ asset('homepage/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
-  
+
   <!-- Vendor CSS Files -->
   <link href="{{ asset('homepage/assets/vendor/aos/aos.css') }}" rel="stylesheet">
   <link href="{{ asset('homepage/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -47,16 +47,23 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link scrollto active" href="#hero">หน้าหลัก </a></li>
+          {{-- <li><a class="nav-link scrollto" href="#about">เกี่ยวกับ RSIS</a></li>
+          <li><a class="nav-link scrollto" href="#services">โปรแกรมที่เชื่อมต่อ</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">ที่ไหนใช้บ้าง</a></li>
+          <li><a class="nav-link scrollto" href="#team">ทีม</a></li>
+          <li><a href="blog.html">ปัญหาที่พบบ่อย</a></li> --}}
+          <li class="dropdown"><a href="#"><span>เกี่ยวกับ RSIS</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+              <li><a href="#about">RSIS คืออะไร</a></li>
+              <li><a href="#services">โปรแกรมที่เชื่อมต่อ</a></li>
+              <li><a href="#portfolio">ที่ไหนใช้งานแล้วบ้าง</a></li>
+              <li><a href="#team">ทีมSupport</a></li>
+              <li><a href="#">บทความ</a></li>
+              <li><a href="#contact">ติดต่อเรา</a></li>
+
+
+              {{-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="#">Deep Drop Down 1</a></li>
                   <li><a href="#">Deep Drop Down 2</a></li>
@@ -64,14 +71,13 @@
                   <li><a href="#">Deep Drop Down 4</a></li>
                   <li><a href="#">Deep Drop Down 5</a></li>
                 </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
+              </li> --}}
+
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+
+          <li><a class="nav-link scrollto" href="#documentation">เริ่มต้นอย่างไร?</a></li>
+          <li><a class="getstarted scrollto" href="{{ url('/rsis') }}">เข้าสู่ระบบ</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -86,10 +92,12 @@
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center">
           <h1 data-aos="fade-up">เชื่อมต่อระบบข้อมูลผู้บาดเจ็บ/เสียชีวิต ของห้องฉุกเฉินไว้ในโปรแกรมเดียว</h1>
-          <h2 data-aos="fade-up" data-aos-delay="400">ลดภาระในการคีย์ข้อมูลซ้ำซ้อน เพิ่มประสิทธิภาพข้อมูลให้กับพื้นที่ ให้นำข้อมูลไปใช้ประโยชน์ได้ง่ายขึ้น</h2>
+          <h2 data-aos="fade-up" data-aos-delay="400">ลดภาระในการคีย์ข้อมูลซ้ำซ้อน เพิ่มประสิทธิภาพข้อมูลให้กับพื้นที่
+            ให้นำข้อมูลไปใช้ประโยชน์ได้ง่ายขึ้น</h2>
           <div data-aos="fade-up" data-aos-delay="600">
             <div class="text-center text-lg-start">
-              <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+              <a href="#about"
+                class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
                 <span>เริ่มต้นกันเลย</span>
                 <i class="bi bi-arrow-right"></i>
               </a>
@@ -116,10 +124,14 @@
               <h3>RSIS คืออะไร ?</h3>
               <h2>โปรแกรมที่บูรณาการข้อมูลทั้ง ER เข้ามาในโปรแกรมเดียว</h2>
               <p>
-                จากการลงพื้นที่ พบว่าการคีย์ข้อมูลผู้บาดเจ็บจากห้องฉุกเฉิน ต้องทำซ้ำซ้อนกันถึง 3-4 โปรแกรม อีกทั้งการนำข้อมูลออกมาใช้ประโยชน์ เจ้าหน้าที่เองยังต้องใช้ทักษะการเล่นกับข้อมูลให้เป็น โปรเจ็ค RSIS นี้ จะทำให้โรงพยาบาลคีย์ข้อมูลได้ง่าย เชื่อมต่อไปยังหลายโปรแกรม และสามารถดู Dashboard ของข้อมูลของท่านได้อีกด้วย
+                จากการลงพื้นที่ พบว่าการคีย์ข้อมูลผู้บาดเจ็บจากห้องฉุกเฉิน ต้องทำซ้ำซ้อนกันถึง 3-4 โปรแกรม
+                อีกทั้งการนำข้อมูลออกมาใช้ประโยชน์ เจ้าหน้าที่เองยังต้องใช้ทักษะการเล่นกับข้อมูลให้เป็น โปรเจ็ค RSIS นี้
+                จะทำให้โรงพยาบาลคีย์ข้อมูลได้ง่าย เชื่อมต่อไปยังหลายโปรแกรม และสามารถดู Dashboard
+                ของข้อมูลของท่านได้อีกด้วย
               </p>
               <div class="text-center text-lg-start">
-                <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                <a href="#"
+                  class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
                   <span>อ่านเพิ่มเติม</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
@@ -142,7 +154,7 @@
       <div class="container" data-aos="fade-up">
 
         <header class="section-header">
-          <h2>มองต่างมุม</h2>
+          <h1>เราออกแบบจากความต้องการของพื้นที่ เป็นตัวนำ</h1>
           <p>ไม่ใช่แค่ส่งส่วนกลาง ... แต่พื้นที่ต้องนำไปใช้ได้</p>
         </header>
 
@@ -168,7 +180,8 @@
             <div class="box">
               <img src="{{ asset('homepage/assets/img/values-3.png') }}" class="img-fluid" alt="">
               <h3>อิสระในการใช้ข้อมูลเพื่อแก้ปัญหา</h3>
-              <p>ระบบสามารถ Export ข้อมูลภายใต้เงื่อนไข PDPA เพื่อให้พื้นที่สามารถนำข้อมูลไปปรับใช้ในรูปแบบต่างๆ เพื่อประโยชน์ของพื้นที่ต่อไป</p>
+              <p>ระบบสามารถ Export ข้อมูลภายใต้เงื่อนไข PDPA เพื่อให้พื้นที่สามารถนำข้อมูลไปปรับใช้ในรูปแบบต่างๆ
+                เพื่อประโยชน์ของพื้นที่ต่อไป</p>
             </div>
           </div>
 
@@ -188,7 +201,8 @@
             <div class="count-box">
               <i class="bi bi-emoji-smile"></i>
               <div>
-                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
+                  class="purecounter"></span>
                 <p>ผู้คีย์ข้อมูล</p>
               </div>
             </div>
@@ -198,7 +212,8 @@
             <div class="count-box">
               <i class="bi bi-journal-richtext" style="color: #ee6c20;"></i>
               <div>
-                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
+                  class="purecounter"></span>
                 <p>โรงพยาบาล</p>
               </div>
             </div>
@@ -208,7 +223,8 @@
             <div class="count-box">
               <i class="bi bi-people" style="color: #15be56;"></i>
               <div>
-                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1"
+                  class="purecounter"></span>
                 <p>ผู้บาดเจ็บในระบบ</p>
               </div>
             </div>
@@ -218,7 +234,8 @@
             <div class="count-box">
               <i class="bi bi-headset" style="color: #bb0852;"></i>
               <div>
-                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
+                  class="purecounter"></span>
                 <p>ทีมงานที่พร้อมดูแล</p>
               </div>
             </div>
@@ -298,18 +315,18 @@
         <!-- Feature Tabs -->
         <div class="row feture-tabs" data-aos="fade-up">
           <div class="col-lg-6">
-            <h3>Neque officiis dolore maiores et exercitationem quae est seda lidera pat claero</h3>
+            <h3>ไม่ต้องกลัวติดตั้งยาก หรือ ใช้ยาก เรามีคู่มือให้ทุกจุด ทั้งคนคีย์ข้อมูลและคนติดตั้ง </h3>
 
             <!-- Tabs -->
             <ul class="nav nav-pills mb-3">
               <li>
-                <a class="nav-link active" data-bs-toggle="pill" href="#tab1">Saepe fuga</a>
+                <a class="nav-link active" data-bs-toggle="pill" href="#tab1">คนคีย์ข้อมูล</a>
               </li>
               <li>
-                <a class="nav-link" data-bs-toggle="pill" href="#tab2">Voluptates</a>
+                <a class="nav-link" data-bs-toggle="pill" href="#tab2">IT ของโรงพยาบาล</a>
               </li>
               <li>
-                <a class="nav-link" data-bs-toggle="pill" href="#tab3">Corrupti</a>
+                <a class="nav-link" data-bs-toggle="pill" href="#tab3">ผู้นำข้อมูลไปใช้</a>
               </li>
             </ul><!-- End Tabs -->
 
@@ -317,45 +334,54 @@
             <div class="tab-content">
 
               <div class="tab-pane fade show active" id="tab1">
-                <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
+
                 <div class="d-flex align-items-center mb-2">
                   <i class="bi bi-check2"></i>
-                  <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
+                  <h4>กรอกง่าย ทำความเข้าใจไม่ยาก</h4>
                 </div>
-                <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non eveniet magni quaerat nemo et.</p>
+                <p>ด้วยการกรอกบนโปรแกรม ที่ออกแบบมาเหมือนกระดาษในมือของคุณ จึงทำให้ง่ายต่อการเริ่มต้น</p>
                 <div class="d-flex align-items-center mb-2">
                   <i class="bi bi-check2"></i>
-                  <h4>Incidunt non veritatis illum ea ut nisi</h4>
+                  <h4>ไม่ต้องคีย์ข้อมูลซ้ำซ้อน</h4>
                 </div>
-                <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora. Quia et perferendis.</p>
+                <p>อยู่หน้าโปรแกรมเดียว ก็สามารถดึงข้อมูลจากหลายๆที่มาลงได้ หรือข้อมูลเรา อาจจะไปเติมให้ระบบอื่นก็ได้
+                </p>
               </div><!-- End Tab 1 Content -->
 
               <div class="tab-pane fade show" id="tab2">
-                <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
+
                 <div class="d-flex align-items-center mb-2">
                   <i class="bi bi-check2"></i>
-                  <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
+                  <h4>ติดตั้งง่าย</h4>
                 </div>
-                <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non eveniet magni quaerat nemo et.</p>
+                <p>มีคู่มือให้ทุกจุด ทั้งเอกสารและ VDO เริ่มต้นง่ายเหมือนใช้เฟรมเวิร์คอะไรสักอย่าง ที่เป็นภาษาไทย</p>
                 <div class="d-flex align-items-center mb-2">
                   <i class="bi bi-check2"></i>
-                  <h4>Incidunt non veritatis illum ea ut nisi</h4>
+                  <h4>Config ไม่ยุ่งยาก </h4>
                 </div>
-                <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora. Quia et perferendis.</p>
+                <p>ทุกบรรทัดมีการอธิบาย เหมือน Bot Ragnarok เลย</p>
+
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check2"></i>
+                  <h4>กินทรัพยากรเครื่อง Server น้อยนิด </h4>
+                </div>
+                <p>API กิน memory ไม่ถึง 20mb มั่นใจได้เลยว่าไม่ Load server คุณแน่นอน</p>
+
               </div><!-- End Tab 2 Content -->
 
               <div class="tab-pane fade show" id="tab3">
-                <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
+
                 <div class="d-flex align-items-center mb-2">
                   <i class="bi bi-check2"></i>
-                  <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
+                  <h4>Dashboard สำเร็จรูป</h4>
                 </div>
-                <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non eveniet magni quaerat nemo et.</p>
+                <p>มี Dashboard สำเร็จรูปให้บริการ ดูปุ๊บรู้ปั้บ อะไรคือจุดเสี่ยงของพื้นที่</p>
                 <div class="d-flex align-items-center mb-2">
                   <i class="bi bi-check2"></i>
-                  <h4>Incidunt non veritatis illum ea ut nisi</h4>
+                  <h4>Export ไปใช้ได้</h4>
                 </div>
-                <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora. Quia et perferendis.</p>
+                <p> ท่านสามารถ Export ข้อมูลไปใช้ได้ "ตามสิทธิที่ได้รับ" โดยทางผู้พัฒนาระบบเข้มงวดเรื่อง
+                  พรบ.ข้อมูลส่วนบุคคล(PDPA) เป็นอย่างยื่ง</p>
               </div><!-- End Tab 3 Content -->
 
             </div>
@@ -370,7 +396,7 @@
 
         <!-- Feature Icons -->
         <div class="row feature-icons" data-aos="fade-up">
-          <h3>Ratione mollitia eos ab laudantium rerum beatae quo</h3>
+          <h3>ประโยชน์จากการใช้ระบบนี้ที่ห้องฉุกเฉินของคุณ</h3>
 
           <div class="row">
 
@@ -456,7 +482,8 @@
             <div class="service-box blue">
               <i class="ri-discuss-line icon"></i>
               <h3>Nesciunt Mete</h3>
-              <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+              <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis
+                tempore et consequatur.</p>
               <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
@@ -465,7 +492,8 @@
             <div class="service-box orange">
               <i class="ri-discuss-line icon"></i>
               <h3>Eosle Commodi</h3>
-              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
+              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut
+                nesciunt dolorem.</p>
               <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
@@ -474,7 +502,8 @@
             <div class="service-box green">
               <i class="ri-discuss-line icon"></i>
               <h3>Ledo Markt</h3>
-              <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
+              <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci
+                eos earum corrupti.</p>
               <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
@@ -483,7 +512,8 @@
             <div class="service-box red">
               <i class="ri-discuss-line icon"></i>
               <h3>Asperiores Commodi</h3>
-              <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
+              <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident
+                adipisci neque.</p>
               <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
@@ -492,7 +522,8 @@
             <div class="service-box purple">
               <i class="ri-discuss-line icon"></i>
               <h3>Velit Doloremque.</h3>
-              <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
+              <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem
+                alias eius labore.</p>
               <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
@@ -501,7 +532,8 @@
             <div class="service-box pink">
               <i class="ri-discuss-line icon"></i>
               <h3>Dolori Architecto</h3>
-              <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
+              <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti
+                recusandae ducimus enim.</p>
               <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
@@ -602,7 +634,7 @@
 
         <header class="section-header">
           <h2>F.A.Q</h2>
-          <p>Frequently Asked Questions</p>
+          <p>คำถามที่ถามบ่อย</p>
         </header>
 
         <div class="row">
@@ -611,39 +643,48 @@
             <div class="accordion accordion-flush" id="faqlist1">
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq-content-1">
                     Non consectetur a erat nam at lectus urna duis?
                   </button>
                 </h2>
                 <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
                   <div class="accordion-body">
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur
+                    gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
                   </div>
                 </div>
               </div>
 
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq-content-2">
                     Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
                   </button>
                 </h2>
                 <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
                   <div class="accordion-body">
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id
+                    donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque
+                    elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
                   </div>
                 </div>
               </div>
 
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq-content-3">
                     Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
                   </button>
                 </h2>
                 <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
                   <div class="accordion-body">
-                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar
+                    elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque
+                    eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis
+                    sed odio morbi quis
                   </div>
                 </div>
               </div>
@@ -658,39 +699,49 @@
 
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-1">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq2-content-1">
                     Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
                   </button>
                 </h2>
                 <div id="faq2-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
                   <div class="accordion-body">
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id
+                    donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque
+                    elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
                   </div>
                 </div>
               </div>
 
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq2-content-2">
                     Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
                   </button>
                 </h2>
                 <div id="faq2-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
                   <div class="accordion-body">
-                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in.
+                    Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est.
+                    Purus gravida quis blandit turpis cursus in
                   </div>
                 </div>
               </div>
 
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq2-content-3">
                     Varius vel pharetra vel turpis nunc eget lorem dolor?
                   </button>
                 </h2>
                 <div id="faq2-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
                   <div class="accordion-body">
-                    Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
+                    Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada
+                    nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut
+                    venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas
+                    egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
                   </div>
                 </div>
               </div>
@@ -734,7 +785,8 @@
                 <h4>App 1</h4>
                 <p>App</p>
                 <div class="portfolio-links">
-                  <a href="{{ asset('homepage/assets/img/portfolio/portfolio-1.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
+                  <a href="{{ asset('homepage/assets/img/portfolio/portfolio-1.jpg') }}" data-gallery="portfolioGallery"
+                    class="portfokio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
@@ -748,7 +800,8 @@
                 <h4>Web 3</h4>
                 <p>Web</p>
                 <div class="portfolio-links">
-                  <a href="{{ asset('homepage/assets/img/portfolio/portfolio-2.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
+                  <a href="{{ asset('homepage/assets/img/portfolio/portfolio-2.jpg') }}" data-gallery="portfolioGallery"
+                    class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
@@ -762,7 +815,8 @@
                 <h4>App 2</h4>
                 <p>App</p>
                 <div class="portfolio-links">
-                  <a href="{{ asset('homepage/assets/img/portfolio/portfolio-3.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
+                  <a href="{{ asset('homepage/assets/img/portfolio/portfolio-3.jpg') }}" data-gallery="portfolioGallery"
+                    class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
@@ -776,7 +830,8 @@
                 <h4>Card 2</h4>
                 <p>Card</p>
                 <div class="portfolio-links">
-                  <a href="{{ asset('homepage/assets/img/portfolio/portfolio-4.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 2"><i class="bi bi-plus"></i></a>
+                  <a href="{{ asset('homepage/assets/img/portfolio/portfolio-4.jpg') }}" data-gallery="portfolioGallery"
+                    class="portfokio-lightbox" title="Card 2"><i class="bi bi-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
@@ -790,7 +845,8 @@
                 <h4>Web 2</h4>
                 <p>Web</p>
                 <div class="portfolio-links">
-                  <a href="{{ asset('homepage/assets/img/portfolio/portfolio-5.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 2"><i class="bi bi-plus"></i></a>
+                  <a href="{{ asset('homepage/assets/img/portfolio/portfolio-5.jpg') }}" data-gallery="portfolioGallery"
+                    class="portfokio-lightbox" title="Web 2"><i class="bi bi-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
@@ -804,7 +860,8 @@
                 <h4>App 3</h4>
                 <p>App</p>
                 <div class="portfolio-links">
-                  <a href="{{ asset('homepage/assets/img/portfolio/portfolio-6.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
+                  <a href="{{ asset('homepage/assets/img/portfolio/portfolio-6.jpg') }}" data-gallery="portfolioGallery"
+                    class="portfokio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
@@ -818,7 +875,8 @@
                 <h4>Card 1</h4>
                 <p>Card</p>
                 <div class="portfolio-links">
-                  <a href="{{ asset('homepage/assets/img/portfolio/portfolio-7.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 1"><i class="bi bi-plus"></i></a>
+                  <a href="{{ asset('homepage/assets/img/portfolio/portfolio-7.jpg') }}" data-gallery="portfolioGallery"
+                    class="portfokio-lightbox" title="Card 1"><i class="bi bi-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
@@ -832,7 +890,8 @@
                 <h4>Card 3</h4>
                 <p>Card</p>
                 <div class="portfolio-links">
-                  <a href="{{ asset('homepage/assets/img/portfolio/portfolio-8.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 3"><i class="bi bi-plus"></i></a>
+                  <a href="{{ asset('homepage/assets/img/portfolio/portfolio-8.jpg') }}" data-gallery="portfolioGallery"
+                    class="portfokio-lightbox" title="Card 3"><i class="bi bi-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
@@ -846,7 +905,8 @@
                 <h4>Web 3</h4>
                 <p>Web</p>
                 <div class="portfolio-links">
-                  <a href="{{ asset('homepage/assets/img/portfolio/portfolio-9.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
+                  <a href="{{ asset('homepage/assets/img/portfolio/portfolio-9.jpg') }}" data-gallery="portfolioGallery"
+                    class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
@@ -875,13 +935,16 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium
+                  quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
                 </p>
                 <div class="profile mt-auto">
-                  <img src="{{ asset('homepage/assets/img/testimonials/testimonials-1.jpg') }}" class="testimonial-img" alt="">
+                  <img src="{{ asset('homepage/assets/img/testimonials/testimonials-1.jpg') }}" class="testimonial-img"
+                    alt="">
                   <h3>Saul Goodman</h3>
                   <h4>Ceo &amp; Founder</h4>
                 </div>
@@ -891,13 +954,16 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis
+                  quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
                 </p>
                 <div class="profile mt-auto">
-                  <img src="{{ asset('homepage/assets/img/testimonials/testimonials-2.jpg') }}" class="testimonial-img" alt="">
+                  <img src="{{ asset('homepage/assets/img/testimonials/testimonials-2.jpg') }}" class="testimonial-img"
+                    alt="">
                   <h3>Sara Wilsson</h3>
                   <h4>Designer</h4>
                 </div>
@@ -907,13 +973,16 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim
+                  tempor labore quem eram duis noster aute amet eram fore quis sint minim.
                 </p>
                 <div class="profile mt-auto">
-                  <img src="{{ asset('homepage/assets/img/testimonials/testimonials-3.jpg') }}" class="testimonial-img" alt="">
+                  <img src="{{ asset('homepage/assets/img/testimonials/testimonials-3.jpg') }}" class="testimonial-img"
+                    alt="">
                   <h3>Jena Karlis</h3>
                   <h4>Store Owner</h4>
                 </div>
@@ -923,13 +992,16 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit
+                  minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
                 </p>
                 <div class="profile mt-auto">
-                  <img src="{{ asset('homepage/assets/img/testimonials/testimonials-4.jpg') }}" class="testimonial-img" alt="">
+                  <img src="{{ asset('homepage/assets/img/testimonials/testimonials-4.jpg') }}" class="testimonial-img"
+                    alt="">
                   <h3>Matt Brandon</h3>
                   <h4>Freelancer</h4>
                 </div>
@@ -939,13 +1011,16 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa
+                  labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
                 </p>
                 <div class="profile mt-auto">
-                  <img src="{{ asset('homepage/assets/img/testimonials/testimonials-5.jpg') }}" class="testimonial-img" alt="">
+                  <img src="{{ asset('homepage/assets/img/testimonials/testimonials-5.jpg') }}" class="testimonial-img"
+                    alt="">
                   <h3>John Larson</h3>
                   <h4>Entrepreneur</h4>
                 </div>
@@ -986,7 +1061,8 @@
               <div class="member-info">
                 <h4>Walter White</h4>
                 <span>Chief Executive Officer</span>
-                <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
+                <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum
+                  exercitationem iure minima enim corporis et voluptate.</p>
               </div>
             </div>
           </div>
@@ -1005,7 +1081,8 @@
               <div class="member-info">
                 <h4>Sarah Jhonson</h4>
                 <span>Product Manager</span>
-                <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
+                <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit corporis.
+                  Voluptate sed quas reiciendis animi neque sapiente.</p>
               </div>
             </div>
           </div>
@@ -1024,7 +1101,8 @@
               <div class="member-info">
                 <h4>William Anderson</h4>
                 <span>CTO</span>
-                <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptates enim aut architecto porro aspernatur molestiae modi.</p>
+                <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptates enim aut
+                  architecto porro aspernatur molestiae modi.</p>
               </div>
             </div>
           </div>
@@ -1043,7 +1121,8 @@
               <div class="member-info">
                 <h4>Amanda Jepson</h4>
                 <span>Accountant</span>
-                <p>Rerum voluptate non adipisci animi distinctio et deserunt amet voluptas. Quia aut aliquid doloremque ut possimus ipsum officia.</p>
+                <p>Rerum voluptate non adipisci animi distinctio et deserunt amet voluptas. Quia aut aliquid doloremque
+                  ut possimus ipsum officia.</p>
               </div>
             </div>
           </div>
@@ -1060,20 +1139,28 @@
       <div class="container" data-aos="fade-up">
 
         <header class="section-header">
-          <h2>Our Clients</h2>
-          <p>Temporibus omnis officia</p>
+          <h2>Our Partners</h2>
+          <p>หน่วยงานที่ร่วมมือกับเรา</p>
         </header>
 
         <div class="clients-slider swiper">
           <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="{{ asset('homepage/assets/img/clients/client-1.png') }}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{{ asset('homepage/assets/img/clients/client-2.png') }}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{{ asset('homepage/assets/img/clients/client-3.png') }}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{{ asset('homepage/assets/img/clients/client-4.png') }}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{{ asset('homepage/assets/img/clients/client-5.png') }}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{{ asset('homepage/assets/img/clients/client-6.png') }}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{{ asset('homepage/assets/img/clients/client-7.png') }}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{{ asset('homepage/assets/img/clients/client-8.png') }}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{{ asset('homepage/assets/img/clients/client-1.png') }}"
+                class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{{ asset('homepage/assets/img/clients/client-2.png') }}"
+                class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{{ asset('homepage/assets/img/clients/client-3.png') }}"
+                class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{{ asset('homepage/assets/img/clients/client-4.png') }}"
+                class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{{ asset('homepage/assets/img/clients/client-5.png') }}"
+                class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{{ asset('homepage/assets/img/clients/client-6.png') }}"
+                class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{{ asset('homepage/assets/img/clients/client-7.png') }}"
+                class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{{ asset('homepage/assets/img/clients/client-8.png') }}"
+                class="img-fluid" alt=""></div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -1095,28 +1182,34 @@
 
           <div class="col-lg-4">
             <div class="post-box">
-              <div class="post-img"><img src="{{ asset('homepage/assets/img/blog/blog-1.jpg') }}" class="img-fluid" alt=""></div>
+              <div class="post-img"><img src="{{ asset('homepage/assets/img/blog/blog-1.jpg') }}" class="img-fluid"
+                  alt=""></div>
               <span class="post-date">Tue, September 15</span>
               <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit</h3>
-              <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+              <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i
+                  class="bi bi-arrow-right"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4">
             <div class="post-box">
-              <div class="post-img"><img src="{{ asset('homepage/assets/img/blog/blog-2.jpg') }}" class="img-fluid" alt=""></div>
+              <div class="post-img"><img src="{{ asset('homepage/assets/img/blog/blog-2.jpg') }}" class="img-fluid"
+                  alt=""></div>
               <span class="post-date">Fri, August 28</span>
               <h3 class="post-title">Et repellendus molestiae qui est sed omnis voluptates magnam</h3>
-              <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+              <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i
+                  class="bi bi-arrow-right"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4">
             <div class="post-box">
-              <div class="post-img"><img src="{{ asset('homepage/assets/img/blog/blog-3.jpg') }}" class="img-fluid" alt=""></div>
+              <div class="post-img"><img src="{{ asset('homepage/assets/img/blog/blog-3.jpg') }}" class="img-fluid"
+                  alt=""></div>
               <span class="post-date">Mon, July 11</span>
               <h3 class="post-title">Quia assumenda est et veritatis aut quae</h3>
-              <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+              <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i
+                  class="bi bi-arrow-right"></i></a>
             </div>
           </div>
 
@@ -1133,7 +1226,7 @@
 
         <header class="section-header">
           <h2>Contact</h2>
-          <p>Contact Us</p>
+          <p>ติดต่อเราได้หลากหลายช่องทาง</p>
         </header>
 
         <div class="row gy-4">
@@ -1241,7 +1334,8 @@
               <img src="{{ asset('homepage/assets/img/logo.png') }}" alt="">
               <span>RSIS</span>
             </a>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies
+              darta donna mare fermentum iaculis eu non diam phasellus.</p>
             <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
               <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -1302,8 +1396,9 @@
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-{{-- {{ asset('homepage/assets/img/favicon.png') }} --}}
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+  {{-- {{ asset('homepage/assets/img/favicon.png') }} --}}
   <!-- Vendor JS Files -->
   <script src="{{ asset('homepage/assets/vendor/purecounter/purecounter.js') }}"></script>
   <script src="{{ asset('homepage/assets/vendor/aos/aos.js') }}"></script>

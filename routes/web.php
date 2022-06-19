@@ -20,3 +20,8 @@ Route::get('/', function () {
 Route::get('/test', function () {
     return view('test_bootstrap');
 });
+
+
+Route::get('/rsis', function () {
+    return view('rsis/login');
+});
