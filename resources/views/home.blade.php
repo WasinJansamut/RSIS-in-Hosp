@@ -77,7 +77,7 @@
           </li>
 
           <li><a class="nav-link scrollto" href="#documentation">เริ่มต้นอย่างไร?</a></li>
-          <li><a class="getstarted scrollto" href="{{ url('/rsis') }}">เข้าสู่ระบบ</a></li>
+          <li><a class="getstarted scrollto" href="{{ url('/rsis') }}">เข้าสู่ระบบ </a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -91,18 +91,20 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center">
-          <h1 data-aos="fade-up">เชื่อมต่อระบบข้อมูลผู้บาดเจ็บ/เสียชีวิต ของห้องฉุกเฉินไว้ในโปรแกรมเดียว</h1>
+          <h1 data-aos="fade-up">เชื่อมต่อระบบข้อมูลผู้บาดเจ็บ/เสียชีวิต
+            ของห้องฉุกเฉินไว้ในโปรแกรมเดียว</h1>
           <h2 data-aos="fade-up" data-aos-delay="400">ลดภาระในการคีย์ข้อมูลซ้ำซ้อน เพิ่มประสิทธิภาพข้อมูลให้กับพื้นที่
             ให้นำข้อมูลไปใช้ประโยชน์ได้ง่ายขึ้น</h2>
           <div data-aos="fade-up" data-aos-delay="600">
             <div class="text-center text-lg-start">
               <a href="#about"
                 class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                <span>เริ่มต้นกันเลย</span>
+                <span>เริ่มต้นกันเลย </span>
                 <i class="bi bi-arrow-right"></i>
               </a>
             </div>
           </div>
+
         </div>
         <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
           <img src="{{ asset('homepage/assets/img/hero-img.png') }}" class="img-fluid" alt="">
